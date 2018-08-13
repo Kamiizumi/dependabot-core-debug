@@ -1,5 +1,17 @@
 services:
   - docker
 
+jobs:
+  include:
+    - stage: Build
+      name: "Build Docker Image"
+      script: docker build -t dependabot-core-debug:latest .
+    
+    - stage: Test
+      name: "Clone dependabot-core"
+      script: git clone https://github.com/dependabot/dependabot-core.git && cd dependabot-core && git checkout tags/v0.66.8
+      name: "Build dependabot-core"
+      script: docker run --rm -v $TRAVIS_BUILD_DIR:/src dependabot-core-debug:latest /src/TestContainer.sh
+
 script:
   - docker build -t dependabot-core-debug:latest .
