@@ -3,4 +3,3 @@ services:
 
 script:
   - docker build -t dependabot-core-debug:latest .
-
