@@ -10,4 +10,4 @@ script:
   # - docker build -t dependabot-core-debug:latest .
   - git clone https://github.com/dependabot/dependabot-core.git && cd dependabot-core && git checkout tags/v0.66.8
   # - docker run --rm -v $TRAVIS_BUILD_DIR:/src dependabot-core-debug:latest ls && ls /src && chmod +x /src/TestContainer.sh && /src/TestContainer.sh
-  - docker run -v $TRAVIS_BUILD_DIR:/testing alpine:latest ls -la /testing
+  - docker run -v $TRAVIS_BUILD_DIR:/src alpine:latest ls -la /src
