@@ -18,4 +18,4 @@ cd helpers/go && make && cd /src/dependabot-core
 # Run dependabot tests
 cd helpers/yarn && node_modules/.bin/jest && cd /src/dependabot-core
 cd helpers/npm && node_modules/.bin/jest && cd /src/dependabot-core
-bundle exec rspec spec --format documentation --format RspecJunitFormatter -o ~/rspec/rspec.xml --tag "~skip_ci"
+#bundle exec rspec spec --format documentation --format RspecJunitFormatter -o ~/rspec/rspec.xml --tag "~skip_ci"
