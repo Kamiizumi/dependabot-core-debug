@@ -18,4 +18,8 @@ cd helpers/go && make && cd /src/dependabot-core
 # Run dependabot tests
 cd helpers/yarn && node_modules/.bin/jest && cd /src/dependabot-core
 cd helpers/npm && node_modules/.bin/jest && cd /src/dependabot-core
+
+# Ruby tests are disabled because a prompt appears during CI asking for GitHub
+# credentials during the test "given a gem with a private github source".
+# TODO: Enable Ruby tests when a fix for the above issue has been found.
 #bundle exec rspec spec --format documentation --format RspecJunitFormatter -o ~/rspec/rspec.xml --tag "~skip_ci"
