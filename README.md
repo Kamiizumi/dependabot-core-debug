@@ -16,7 +16,7 @@ The `TestContainer.sh` script can test to ensure the image is working as expecte
     ``` bash
     git clone https://github.com/dependabot/dependabot-core.git
     cd dependabot-core
-    git checkout tags/v0.66.8
+    git checkout tags/v0.75.118
     ```
 
 1. Run the built Docker image, mounting this repository to /src and running the `TestContainer.sh` script.
